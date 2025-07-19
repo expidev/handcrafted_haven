@@ -1,0 +1,80 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+  gap: 2rem;
+  background-color: var(--softSand);
+}
+
+.left {
+  flex: 1;
+}
+
+.image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.right {
+  flex: 1;
+}
+
+.price {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--mossGreen);
+  margin-top: 0.5rem;
+}
+
+.desc {
+  margin: 1rem 0;
+}
+
+.contactButton {
+  background-color: var(--charcoalGray);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.reviewBlock {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-left: 4px solid #eee;
+}
+
+.button {
+  background-color: var(--burntGold);
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.reviews {
+  padding: 2rem;
+  background-color: white;
+}
+
+.reviews h2 {
+  margin-bottom: 1rem;
+}
+
+.reviews blockquote {
+  border-left: 4px solid var(--burntGold);
+  padding-left: 1rem;
+  margin: 1rem 0;
+  font-style: italic;
+}
+
+.reviews footer {
+  font-size: 0.9rem;
+  color: var(--mediumGray);
+  margin-top: 0.5rem;
+}

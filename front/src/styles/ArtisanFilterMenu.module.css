@@ -1,0 +1,27 @@
+.filterForm {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-bottom: 30px;
+}
+
+.filterInput {
+	padding: 8px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+.filterInput:focus {
+	border-color: #ccc;
+	outline: none;
+}
+
+.filterButton {
+	background-color: var(--burntGold);
+	padding: 8px 10px;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}

@@ -1,0 +1,123 @@
+.main {
+  padding: 2rem;
+  background-color: var(--softSand);
+  transition: opacity 1s ease-in-out;
+}
+
+.fadeIn {
+  opacity: 1;
+}
+
+.why {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.why h2 {
+  font-size: 28px;
+  margin-bottom: 1rem;
+}
+
+.whyGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.whyCard {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  max-width: 280px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.whyCard:hover {
+  transform: translateY(-5px);
+}
+
+.whyCard img {
+  width: 60px;
+  margin-bottom: 1rem;
+}
+
+.testimonials {
+  margin-top: 5rem;
+  text-align: center;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  animation: fadein 2s ease-in;
+}
+
+.testimonials h2 {
+  font-size: 26px;
+  margin-bottom: 2rem;
+}
+
+.reviewSlider blockquote {
+  max-width: 600px;
+  margin: 1rem auto;
+  font-style: italic;
+  color: var(--charcoalGray);
+}
+
+.reviewSlider footer {
+  margin-top: 0.5rem;
+  color: var(--mediumGray);
+  font-size: 0.9rem;
+}
+
+.footer {
+  background-color: var(--charcoalGray);
+  color: var(--softSand);
+  padding: 2rem;
+}
+
+.footerTop {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.footerTop div {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footerTop input {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+}
+
+.footerTop button {
+  background-color: var(--burntGold);
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.footerBottom {
+  text-align: center;
+  font-size: 0.85rem;
+  margin-top: 1rem;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,45 @@
+.container {
+  padding: 4rem;
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.summary {
+  flex: 1;
+  min-width: 300px;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.form {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid var(--mediumGray);
+  border-radius: 6px;
+}
+
+.button {
+  padding: 12px;
+  background-color: var(--charcoalGray);
+  color: var(--softSand);
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}

@@ -1,0 +1,44 @@
+.testimonials {
+  margin-top: 4rem;
+  background-color: white;
+  padding: 3rem 2rem;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.testimonials h2 {
+  font-size: 26px;
+  color: var(--charcoalGray);
+  margin-bottom: 2rem;
+}
+
+.testimonials blockquote {
+  font-style: italic;
+  font-size: 18px;
+  color: var(--mediumGray);
+  max-width: 700px;
+  margin: 0 auto;
+  transition: opacity 1s ease-in-out;
+}
+
+.testimonials footer {
+  margin-top: 1rem;
+  color: var(--mediumGray);
+  font-size: 0.95rem;
+}
+
+.fadeIn {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

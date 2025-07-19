@@ -1,0 +1,76 @@
+.heroContainer {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+}
+
+.backgroundImage {
+  object-fit: cover;
+  filter: brightness(0.75);
+  transition: transform 0.5s ease-in-out;
+}
+
+.heroContainer:hover .backgroundImage {
+  transform: scale(1.015);
+}
+
+.overlayContent {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  color: white;
+  z-index: 2;
+  animation: fadeInUp 1s ease-out;
+  max-width: 90%;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.heroButton {
+  background-color: var(--burntGold);
+  border: none;
+  padding: 12px 28px;
+  font-size: 18px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.heroButton:hover {
+  background-color: #d18e0f;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .heroButton {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .overlayContent {
+    left: 5%;
+  }
+}
