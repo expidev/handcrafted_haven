@@ -21,7 +21,7 @@ export default function Checkout() {
     const fetchProductDetails = async () => {
       try {
         const productIds = parsedProducts.map((item) => item.productId).join(",");
-        const res = await fetch(`http://localhost:5500/api/products?ids=${productIds}`);
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products?ids=${productIds}`);
         const fullProducts = await res.json();
 
         const enrichedItems = parsedProducts.map((item) => {
@@ -55,7 +55,7 @@ export default function Checkout() {
     }
 
     const token = localStorage.getItem("token");
-    const res = await fetch("http://localhost:5500/api/orders", {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/orders`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -74,7 +74,7 @@ export default function Checkout() {
 
     if (res.ok) {
       alert("Order placed successfully!");
-      await fetch("http://localhost:5500/api/cart/clear", {
+      await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/cart/clear`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,

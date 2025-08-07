@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Link from "next/link";
 import Footer from "../components/Footer";
+import ProductCard from "@/components/ProductCard";
 
 export default function Products() {
   const [products, setProducts] = useState([]);
@@ -11,7 +12,7 @@ export default function Products() {
   const [sort, setSort] = useState("default");
 
   useEffect(() => {
-    fetch("http://localhost:5500/api/products")
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products`)
       .then(async (res) => {
         const contentType = res.headers.get("content-type");
         if (!res.ok || !contentType?.includes("application/json")) {
@@ -94,45 +95,7 @@ export default function Products() {
             <p>No products match the criteria.</p>
           ) : (
             filteredProducts.map((product) => (
-              <div
-                key={product._id}
-                style={{
-                  border: "1px solid #ddd",
-                  borderRadius: "10px",
-                  padding: "1rem",
-                  textAlign: "center",
-                  boxShadow: "0 4px 6px rgba(0,0,0,0.05)",
-                }}
-              >
-                <img
-                  src={product.image}
-                  alt={product.title}
-                  style={{
-                    width: "100%",
-                    height: "180px",
-                    objectFit: "cover",
-                    borderRadius: "6px",
-                    marginBottom: "1rem",
-                  }}
-                />
-                <h3>{product.title}</h3>
-                <p>${product.price}</p>
-                <Link href={`/products/${product._id}`}>
-                  <button
-                    style={{
-                      marginTop: "0.5rem",
-                      backgroundColor: "#DAA520",
-                      color: "white",
-                      padding: "8px 16px",
-                      border: "none",
-                      borderRadius: "4px",
-                      cursor: "pointer",
-                    }}
-                  >
-                    View
-                  </button>
-                </Link>
-              </div>
+              <ProductCard key={product._id}  product={product} />
             ))
           )}
         </div>

@@ -15,11 +15,11 @@ export default function ProductDetails() {
   useEffect(() => {
     if (id) {
       console.log(id);
-      fetch(`http://localhost:5500/api/products/${id}`)
+      fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products/${id}`)
         .then((res) => res.json())
         .then((data) => setProduct(data));
 
-      fetch(`http://localhost:5500/api/reviews/${id}`)
+      fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/reviews/${id}`)
         .then((res) => res.json())
         .then((data) => setReviews(data));
     }
@@ -27,7 +27,7 @@ export default function ProductDetails() {
 
   const addToCart = async () => {
     const token = localStorage.getItem("token");
-    await fetch("http://localhost:5500/api/cart/add", {
+    await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/cart/add`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -46,7 +46,7 @@ export default function ProductDetails() {
       return;
     }
 
-    const response = await fetch(`http://localhost:5500/api/reviews/${id}`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/reviews/${id}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

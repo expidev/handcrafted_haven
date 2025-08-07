@@ -9,7 +9,7 @@ export default function Orders() {
 
   useEffect(() => {
     const token = localStorage.getItem("token");
-    fetch("http://localhost:5500/api/orders", {
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/orders`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },

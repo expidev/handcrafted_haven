@@ -21,7 +21,7 @@ export default function CartPage() {
       }
 
       try {
-        const res = await fetch("http://localhost:5500/api/auth/me", {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/auth/me`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -48,7 +48,7 @@ export default function CartPage() {
 
   const fetchCart = async (token) => {
     try {
-      const res = await fetch("http://localhost:5500/api/cart", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/cart`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -69,7 +69,7 @@ export default function CartPage() {
     if (!token) return;
 
     try {
-      await fetch("http://localhost:5500/api/cart/update", {
+      await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/cart/update`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -97,7 +97,7 @@ export default function CartPage() {
     if (!token) return;
 
     try {
-      await fetch("http://localhost:5500/api/cart/remove", {
+      await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/cart/remove`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
