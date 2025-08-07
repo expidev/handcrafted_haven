@@ -1,40 +1,43 @@
 const mongoose = require("mongoose");
 const fs = require("fs");
 const csv = require("csv-parser");
+const User = require("./models/User")
 
 mongoose.connect("mongodb://localhost:27017/handcrafted", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
 
-const User = mongoose.model("User", new mongoose.Schema({
-  name: String,
-  email: { type: String, unique: true },
-  password: String,
-  isSeller: Boolean,
-}));
+const Product = mongoose.model(
+  "Product",
+  new mongoose.Schema({
+    title: String,
+    description: String,
+    price: Number,
+    image: String,
+    category: String,
+    rating: Number,
+    artisanId: mongoose.Types.ObjectId,
+  }),
+);
 
-const Product = mongoose.model("Product", new mongoose.Schema({
-  title: String,
-  description: String,
-  price: Number,
-  image: String,
-  category: String,
-  rating: Number,
-  artisanId: mongoose.Types.ObjectId,
-}));
+const Review = mongoose.model(
+  "Review",
+  new mongoose.Schema({
+    productId: mongoose.Types.ObjectId,
+    userId: mongoose.Types.ObjectId,
+    rating: Number,
+    comment: String,
+  }),
+);
 
-const Review = mongoose.model("Review", new mongoose.Schema({
-  productId: mongoose.Types.ObjectId,
-  userId: mongoose.Types.ObjectId,
-  rating: Number,
-  comment: String,
-}));
-
-const Cart = mongoose.model("Cart", new mongoose.Schema({
-  userId: mongoose.Types.ObjectId,
-  items: [{ productId: mongoose.Types.ObjectId, quantity: Number }],
-}));
+const Cart = mongoose.model(
+  "Cart",
+  new mongoose.Schema({
+    userId: mongoose.Types.ObjectId,
+    items: [{ productId: mongoose.Types.ObjectId, quantity: Number }],
+  }),
+);
 
 function loadCSV(filePath) {
   return new Promise((resolve) => {
@@ -51,10 +54,10 @@ async function importData() {
   const users = await loadCSV("./data/users.csv");
   await User.insertMany(
     users.map((u) => ({
-        ...u,
-        isSeller: u.isSeller === "True" || u.isSeller === true,
-    }))
-    );
+      ...u,
+      isSeller: u.isSeller === "True" || u.isSeller === true,
+    })),
+  );
 
   const allUsers = await User.find();
 

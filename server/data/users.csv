@@ -1,101 +1,61 @@
-name,email,password,isSeller
-Benjamin Hutchinson,benjamin56@example.net,(m*Zibd_a0,False
-Jessica Bruce,karahernandez@example.org,B4MavLiD(f,False
-Bonnie Fry,powelljulia@example.net,@WC%BMyNv1,True
-David Trujillo,erin04@example.net,(4RDl%&80s,True
-Cindy Munoz,bwood@example.com,C82OgwHyX@,True
-Marisa Bailey,carla79@example.com,m#3JRiAh_7,True
-Michael Diaz,murrayalyssa@example.org,!t2peAnpy_,False
-Christopher Decker,nhebert@example.net,jaKdI8Gt$d,False
-Matthew Cook,wyattmiranda@example.org,$GVgBwEt3N,True
-Jesse Davis,markowens@example.net,(75DNAWs0n,False
-Kenneth Colon MD,taylorstephanie@example.org,!yFJv_A#q9,False
-Dan Taylor,dianacobb@example.com,61VCCoUg$W,False
-Rodney Davila,dale53@example.org,!40JElPuc1,False
-Matthew Terry,brittanyhernandez@example.com,j_VJNrtz)3,True
-Maureen Schneider,jamesswanson@example.net,0@aq8RSejv,False
-Michael White,paula41@example.org,$Y$#)WuP6a,False
-April Wilson,katelyn38@example.org,#r+84Ai)XK,True
-Marcus Rodriguez,fergusonwhitney@example.com,B+H6ESx_en,False
-Jaime Lynch,jasminewatson@example.org,BfPySaSa&1,False
-Linda Woods,greenanna@example.org,3%Mh@86h*1,True
-Justin Johnson,sharonenglish@example.net,^$IIoGcR27,True
-April Williams,jlewis@example.net,%I&!*Uwk3F,True
-Courtney Hill,colemackenzie@example.org,+&!01jQx*r,True
-Jessica Howard,haneyshari@example.org,&5OYLCp1dL,True
-Paul Williams,henrywood@example.com,Qo7JbmWty@,True
-Thomas Francis,mendozabrittany@example.net,FEtFE(e2^8,True
-Austin Adams,aprilhowell@example.org,)0Gg!@xkDN,True
-Kristi Lee,saundersclayton@example.org,u6Aq!PH0^Y,False
-Debbie Gonzalez,jeremywoodard@example.net,#NQ2$RUh0#,False
-Chad Fernandez,ubowman@example.com,#81PIevs@Z,True
-Alyssa Christensen,morristiffany@example.net,XJ3jc_Kt)7,False
-Cynthia Harper,jodybeck@example.org,l%36*BUix(,True
-April Wilson,dustin04@example.com,6lFAH7VI)t,True
-Jonathon Marsh,matthewsscott@example.com,vdv0iYq30#,True
-Heather Benjamin,jasonsmith@example.org,cp&1UwSytr,False
-Taylor Baxter,scottjames@example.net,_fv^toT4g5,False
-Pamela Walters,marisa38@example.org,RcK5PpZ#H*,False
-Cynthia Dominguez,taylorbelinda@example.org,8&5BX3AsJ&,True
-Joshua James,lauren39@example.net,G127pBzx#S,True
-Jeremy Hughes,imcguire@example.net,^9*kdVVh4B,True
-Cole Avila,catherine44@example.com,aP6FM^Sim^,True
-Eric Vaughn,danielscaroline@example.net,Q+B1uWpq*9,True
-Chad Ramirez,dennis05@example.net,%x3Zh7v%Vh,True
-Savannah Morris,thomas28@example.net,)sTwg^R4v7,True
-Colleen Acosta,mark16@example.net,!vyCAEkc9I,True
-Cassandra Simmons,progers@example.com,GsUvUPYJ+2,False
-Dale Howard,katherine15@example.org,&#G8%zjII4,False
-Travis Mendoza,lindseymichelle@example.com,jJS3KRu2Z*,True
-Martin Anderson,sharon86@example.com,y%n7Xek4W%,False
-Ryan Tyler,stevenrodriguez@example.org,64ANOuXf(M,False
-Charlotte Murray,mollywilson@example.net,q1h1Sz^a#b,False
-Dr. Thomas Brown,thompsonbetty@example.org,%3G0+)*8gq,True
-Amber Powell,thomasbrian@example.net,^4Ajr5m(+2,True
-Tracy Cross,hmorris@example.com,@peCTIUYc6,False
-Michael Rogers,wadevictor@example.org,%jO3NGsgO7,False
-John Estes,pbell@example.org,&9E*zt2L4_,True
-Cameron Thomas Jr.,framirez@example.com,YsiLc(JY#3,False
-Olivia Medina,leslie36@example.com,l^5uLhDpnX,True
-Ryan Adkins,jenniferrobinson@example.com,$7yuYnI3M*,False
-Scott Cisneros,edwardjackson@example.com,#kNh)O+q5j,True
-Linda Cook,adorsey@example.org,w4x8V3&v&6,False
-William Richards,william74@example.org,#!PH40AK8z,True
-Jessica Wells,andreaking@example.org,1+VYeikU%d,True
-John Kelly,john47@example.org,D#N0(Ki50Y,True
-George Watkins,lewispaula@example.net,59KicSxT*5,True
-Mario Chang,grhodes@example.net,fz08fkGjV!,False
-Darrell Chan,allison56@example.com,IR4Qg+Nfd_,True
-Sarah Chang,jeffreyparker@example.net,+4oxKcxu^a,False
-Lindsay Marshall,cruzjohn@example.org,t71MLkLn)v,True
-Anna Jones,kathrynlogan@example.com,*%!6iCxk%W,False
-Mr. Kevin Lopez,ptaylor@example.com,^!!ciib&T0,True
-Megan Green,yadams@example.org,6^*U6Oyc!4,False
-Victoria Neal,doris51@example.com,$9iE$^MlsN,True
-Joshua Lopez,frice@example.org,(oNFtWEL3j,False
-David Ortiz,collinslisa@example.com,+9LqdSy)&u,True
-Lacey Foley,sara00@example.com,!0cmpWZm8o,True
-Angela Carson,smay@example.org,e%&D2BqjxO,False
-Andrea Garcia,jbeasley@example.org,$y7!RM(wLC,False
-Kelly Rangel,brooke82@example.net,%QPVhw9he6,False
-Matthew Roth,zbaldwin@example.net,y+T7@7UqYC,True
-Richard Waller,jeremylloyd@example.net,!3Bp6NeaEk,False
-Christopher Villegas,contrerasrandy@example.net,g1)B5GoOZ&,False
-Oscar Shannon,shawkathleen@example.com,W8)2F8!h2#,True
-Erik White,ramosdawn@example.net,eou+BxHz#9,True
-Clifford Miller,kenneth19@example.org,gCm3CNBn6$,True
-Melissa Garcia,rbrown@example.net,X0luwbDm&w,True
-Daniel Adams,morganchristopher@example.com,q+9X9v#a)9,True
-Dawn Brown,kristen56@example.org,8GS)B1Vwz@,True
-Stephanie Harris,combskevin@example.com,!4Z$EQyyae,False
-Miss Tina Robertson,jamietaylor@example.org,7B4PkO3Y*j,False
-Nancy Crosby,erin11@example.com,^S7Lw(xv9I,True
-Dominic King,vanessadavis@example.com,hNkXizoG*4,False
-Gregory Powers,rbarker@example.com,I$33QtT+)f,False
-Elizabeth Fields,eddiejohnson@example.com,U1DDY)ip#f,True
-Kevin Morrison,alex07@example.org,C*4RcdKeEu,True
-Erika Vaughn,zacharybryant@example.net,#T37PAlqog,True
-Shelby Wilson,vtodd@example.org,Y@@9Qyc3Ce,True
-Kevin Thomas,campbelljade@example.com,^9b)OmkJ%6,False
-Tonya Lynch,robert22@example.net,pT4FKZ@q@j,False
-Amy Roberts,lauracarr@example.net,$1@#3D2q^6,True
+name,email,password,isSeller,artisanDetails.speciality,artisanDetails.bio,artisanDetails.category,artisanDetails.region,artisanDetails.image
+Benjamin Hutchinson,benjamin56@example.net,(m*Zibd_a0,False,,,,,
+Jessica Bruce,karahernandez@example.org,B4MavLiD(f,False,,,,,
+Bonnie Fry,powelljulia@example.net,@WC%BMyNv1,True,Woodworking,"Experienced artisan specializing in crafting custom wood furniture.",Woodwork,North,https://picsum.photos/150?random=1
+David Trujillo,erin04@example.net,(4RDl%&80s,True,Pottery,"Expert in handmade pottery and ceramic art.",Pottery,South,https://picsum.photos/150?random=2
+Cindy Munoz,bwood@example.com,C82OgwHyX@,True,Jewelry Design,"Creates bespoke jewelry pieces with unique gemstones.",Jewelry,West,https://picsum.photos/150?random=3
+Marisa Bailey,carla79@example.com,m#3JRiAh_7,True,Textile Arts,"Skilled in weaving and fabric design.",Textiles,East,https://picsum.photos/150?random=4
+Michael Diaz,murrayalyssa@example.org,!t2peAnpy_,False,,,,,
+Christopher Decker,nhebert@example.net,jaKdI8Gt$d,False,,,,,
+Matthew Cook,wyattmiranda@example.org,$GVgBwEt3N,True,Leatherwork,"Handcrafts premium leather goods and accessories.",Leather,North,https://picsum.photos/150?random=5
+Matthew Terry,brittanyhernandez@example.com,j_VJNrtz)3,True,Metalwork,"Specializes in forging custom metal sculptures.",Metalwork,South,https://picsum.photos/150?random=6
+April Wilson,katelyn38@example.org,#r+84Ai)XK,True,Glassblowing,"Expert in artistic glass creations and home décor.",Glass,East,https://picsum.photos/150?random=7
+Linda Woods,greenanna@example.org,3%Mh@86h*1,True,Painting,"Creates custom abstract and modern artworks.",Painting,West,https://picsum.photos/150?random=8
+Justin Johnson,sharonenglish@example.net,^$IIoGcR27,True,Carpentry,"Specializes in building bespoke wooden interiors.",Woodwork,North,https://picsum.photos/150?random=9
+April Williams,jlewis@example.net,%I&!*Uwk3F,True,Embroidery,"Hand-stitches custom embroidery and textile patterns.",Textiles,South,https://picsum.photos/150?random=10
+Courtney Hill,colemackenzie@example.org,+&!01jQx*r,True,Furniture Design,"Designs high-end functional and aesthetic furniture.",Furniture,East,https://picsum.photos/150?random=11
+Jessica Howard,haneyshari@example.org,&5OYLCp1dL,True,Calligraphy,"Expert in custom calligraphy and lettering art.",Art,West,https://picsum.photos/150?random=12
+Paul Williams,henrywood@example.com,Qo7JbmWty@,True,Blacksmithing,"Forges traditional and decorative metal pieces.",Metalwork,North,https://picsum.photos/150?random=13
+Thomas Francis,mendozabrittany@example.net,FEtFE(e2^8,True,Stone Carving,"Creates intricate stone sculptures and monuments.",Stonework,South,https://picsum.photos/150?random=14
+Austin Adams,aprilhowell@example.org,)0Gg!@xkDN,True,Woodturning,"Makes artistic wood-turned bowls and vases.",Woodwork,East,https://picsum.photos/150?random=15
+Chad Fernandez,ubowman@example.com,#81PIevs@Z,True,Leathercraft,"Crafts custom belts, wallets, and leather accessories.",Leather,West,https://picsum.photos/150?random=16
+Cynthia Harper,jodybeck@example.org,l%36*BUix(,True,Textile Design,"Focuses on modern fabric patterns and apparel.",Textiles,North,https://picsum.photos/150?random=17
+April Wilson,dustin04@example.com,6lFAH7VI)t,True,Glass Art,"Designs colorful handblown glassware.",Glass,South,https://picsum.photos/150?random=18
+Jonathon Marsh,matthewsscott@example.com,vdv0iYq30#,True,Ceramics,"Produces high-quality hand-thrown ceramic pieces.",Pottery,East,https://picsum.photos/150?random=19
+Cynthia Dominguez,taylorbelinda@example.org,8&5BX3AsJ&,True,Jewelry Making,"Creates intricate jewelry using metals and stones.",Jewelry,West,https://picsum.photos/150?random=20
+Joshua James,lauren39@example.net,G127pBzx#S,True,Metal Art,"Produces unique metal sculptures and décor.",Metalwork,North,https://picsum.photos/150?random=21
+Jeremy Hughes,imcguire@example.net,^9*kdVVh4B,True,Furniture Restoration,"Restores antique and vintage furniture.",Furniture,South,https://picsum.photos/150?random=22
+Cole Avila,catherine44@example.com,aP6FM^Sim^,True,Wood Art,"Specializes in handcrafted wood sculptures.",Woodwork,East,https://picsum.photos/150?random=23
+Eric Vaughn,danielscaroline@example.net,Q+B1uWpq*9,True,Calligraphy,"Creates artistic lettering for invitations and events.",Art,West,https://picsum.photos/150?random=24
+Chad Ramirez,dennis05@example.net,%x3Zh7v%Vh,True,Blacksmithing,"Forges blades and traditional metalwork.",Metalwork,North,https://picsum.photos/150?random=25
+Savannah Morris,thomas28@example.net,)sTwg^R4v7,True,Painting,"Produces expressive modern art canvases.",Painting,South,https://picsum.photos/150?random=26
+Colleen Acosta,mark16@example.net,!vyCAEkc9I,True,Weaving,"Skilled in handwoven textiles and fabrics.",Textiles,East,https://picsum.photos/150?random=27
+Travis Mendoza,lindseymichelle@example.com,jJS3KRu2Z*,True,Pottery,"Specializes in decorative clay pottery and vases.",Pottery,West,https://picsum.photos/150?random=28
+Dr. Thomas Brown,thompsonbetty@example.org,%3G0+)*8gq,True,Wood Joinery,"Expert in creating custom cabinetry and joinery.",Woodwork,North,https://picsum.photos/150?random=29
+Amber Powell,thomasbrian@example.net,^4Ajr5m(+2,True,Leather Design,"Makes artisanal handbags and leatherwear.",Leather,South,https://picsum.photos/150?random=30
+John Estes,pbell@example.org,&9E*zt2L4_,True,Stonework,"Builds stone installations and garden sculptures.",Stonework,East,https://picsum.photos/150?random=31
+Olivia Medina,leslie36@example.com,l^5uLhDpnX,True,Painting,"Specializes in oil and watercolor techniques.",Painting,West,https://picsum.photos/150?random=32
+Scott Cisneros,edwardjackson@example.com,#kNh)O+q5j,True,Carpentry,"Designs and builds custom wooden interiors.",Woodwork,North,https://picsum.photos/150?random=33
+William Richards,william74@example.org,#!PH40AK8z,True,Blacksmithing,"Makes forged iron home fixtures and art.",Metalwork,South,https://picsum.photos/150?random=34
+Jessica Wells,andreaking@example.org,1+VYeikU%d,True,Pottery,"Crafts functional and artistic pottery items.",Pottery,East,https://picsum.photos/150?random=35
+John Kelly,john47@example.org,D#N0(Ki50Y,True,Leathercraft,"Produces leather accessories like belts and bags.",Leather,West,https://picsum.photos/150?random=36
+George Watkins,lewispaula@example.net,59KicSxT*5,True,Furniture Design,"Creates bespoke furniture pieces.",Furniture,North,https://picsum.photos/150?random=37
+Darrell Chan,allison56@example.com,IR4Qg+Nfd_,True,Metalwork,"Forges unique metal sculptures and installations.",Metalwork,South,https://picsum.photos/150?random=38
+Lindsay Marshall,cruzjohn@example.org,t71MLkLn)v,True,Textile Arts,"Produces artistic fabrics and tapestries.",Textiles,East,https://picsum.photos/150?random=39
+Mr. Kevin Lopez,ptaylor@example.com,^!!ciib&T0,True,Glasswork,"Makes decorative glass ornaments and lighting.",Glass,West,https://picsum.photos/150?random=40
+Victoria Neal,doris51@example.com,$9iE$^MlsN,True,Wood Sculpture,"Carves intricate wood statues and décor.",Woodwork,North,https://picsum.photos/150?random=41
+David Ortiz,collinslisa@example.com,+9LqdSy)&u,True,Ceramics,"Designs elegant hand-thrown ceramics.",Pottery,South,https://picsum.photos/150?random=42
+Lacey Foley,sara00@example.com,!0cmpWZm8o,True,Painting,"Creates bold contemporary artworks.",Painting,East,https://picsum.photos/150?random=43
+Matthew Roth,zbaldwin@example.net,y+T7@7UqYC,True,Leathercraft,"Expert in hand-stitched leather goods.",Leather,West,https://picsum.photos/150?random=44
+Oscar Shannon,shawkathleen@example.com,W8)2F8!h2#,True,Wood Joinery,"Builds high-end custom cabinetry.",Woodwork,North,https://picsum.photos/150?random=45
+Erik White,ramosdawn@example.net,eou+BxHz#9,True,Glassblowing,"Specializes in artistic glass installations.",Glass,South,https://picsum.photos/150?random=46
+Clifford Miller,kenneth19@example.org,gCm3CNBn6$,True,Blacksmithing,"Hand-forges metal railings and décor.",Metalwork,East,https://picsum.photos/150?random=47
+Melissa Garcia,rbrown@example.net,X0luwbDm&w,True,Pottery,"Produces artisan clay pottery collections.",Pottery,West,https://picsum.photos/150?random=48
+Daniel Adams,morganchristopher@example.com,q+9X9v#a)9,True,Furniture Crafting,"Custom designs handmade furniture pieces.",Furniture,North,https://picsum.photos/150?random=49
+Dawn Brown,kristen56@example.org,8GS)B1Vwz@,True,Embroidery,"Expert in traditional and modern stitching art.",Textiles,South,https://picsum.photos/150?random=50
+Nancy Crosby,erin11@example.com,^S7Lw(xv9I,True,Weaving,"Makes intricate woven tapestries and fabrics.",Textiles,East,https://picsum.photos/150?random=51
+Elizabeth Fields,eddiejohnson@example.com,U1DDY)ip#f,True,Metal Sculpture,"Creates large metal structures and art.",Metalwork,West,https://picsum.photos/150?random=52
+Kevin Morrison,alex07@example.org,C*4RcdKeEu,True,Woodwork,"Makes custom wooden cabinetry and décor.",Woodwork,North,https://picsum.photos/150?random=53
+Erika Vaughn,zacharybryant@example.net,#T37PAlqog,True,Painting,"Focuses on abstract landscape paintings.",Painting,South,https://picsum.photos/150?random=54
+Shelby Wilson,vtodd@example.org,Y@@9Qyc3Ce,True,Textile Art,"Handcrafts beautiful woven textile pieces.",Textiles,East,https://picsum.photos/150?random=55
+Amy Roberts,lauracarr@example.net,$1@#3D2q^6,True,Pottery,"Designs unique and functional clayware.",Pottery,West,https://picsum.photos/150?random=56

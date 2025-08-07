@@ -1,5 +1,5 @@
 const express = require("express");
-const Review = require("../models/Review"); 
+const Review = require("../models/Review");
 const Product = require("../models/Product");
 const verifyToken = require("../middleware/verifyToken");
 
@@ -25,7 +25,7 @@ router.post("/:productId", verifyToken, async (req, res) =>
       userId: req.user.id
     });
 
-    if (existing) 
+    if (existing)
     {
         return res.status(409).json({ error: "You already reviewed this product." });
     }
