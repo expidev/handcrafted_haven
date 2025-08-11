@@ -8,15 +8,25 @@ import ProductCard from '@/components/ProductCard';
 
 import styles from './seller.module.css';
 import { config } from '../../config/config';
+import EditProfileModal from '@/components/EditProfileModal';
+import AddProductModal from '@/components/AddProductModal';
 
 const Seller = () => {
 	const [id, setId] = useState(null);
-	const [seller, setSeller] = useState(null);
+	const [seller, setSeller] = useState({
+		name: '',
+		image: '',
+		speciality: '',
+		bio: '',
+		products: [],
+	});
+	const [isUpdated, setIsUpdated] = useState(false);
+	const [editModal, setEditModal] = useState(false);
+	const [addProductModal, setAddProductModal] = useState(false);
 
 	const fetchSeller = async (id) => {
 		try {
 			const res = await fetch(`${config.API_URL}/api/artisans/${id}`);
-			console.log("Fetching seller with ID:", id);
 
 			if (res.status === 404) {
 				router.push('/404');
@@ -24,7 +34,6 @@ const Seller = () => {
 			}
 
 			const data = await res.json();
-			console.log("Seller data fetched:", data);
 			setSeller(data);
 		} catch (error) {
 			console.error('Error fetching seller details:', error);
@@ -45,7 +54,57 @@ const Seller = () => {
 		} catch (error) {
 			console.error('Error in useEffect:', error);
 		}
-	}, [id]);
+	}, [id, !isUpdated]);
+
+	const handleSaveProfile = async (formData) => {
+		try {
+			const token = localStorage.getItem('token');
+			const res = await fetch(`${config.API_URL}/api/artisans/${id}`, {
+				method: 'PUT',
+				headers: {
+					Authorization: `Bearer ${token}`,
+				},
+				body: formData,
+			});
+			if (!res.ok) {
+				throw new Error('Failed to update profile');
+			}
+			const updatedSeller = await res.json();
+			setSeller(updatedSeller);
+			setEditModal(false);
+			setIsUpdated(!isUpdated);
+		} catch (error) {
+			alert('Failed to save profile. Please try again.');
+			console.error('Error saving profile:', error);
+		}
+	};
+
+	const handleSaveProduct = async (formData) => {
+		try {
+			const token = localStorage.getItem('token');
+			const res = await fetch(`${config.API_URL}/api/products`, {
+				method: 'POST',
+				headers: {
+					Authorization: `Bearer ${token}`,
+				},
+				body: formData,
+			});
+			if (!res.ok) {
+				throw new Error('Failed to add product');
+			}
+			const newProduct = await res.json();
+			setSeller((prev) => ({
+				...prev,
+				products: [...prev.products, newProduct],
+			}));
+			setAddProductModal(false);
+			setIsUpdated(!isUpdated);
+		} catch (error) {
+			alert('Failed to add product. Please try again.');
+			console.error('Error adding product:', error);
+		}
+	};
+
 
 	return (
 		<>
@@ -62,6 +121,7 @@ const Seller = () => {
 					<h2>Seller Management</h2>
 					<button
 						className={styles.editButton}
+						onClick={() => setEditModal(true)}
 					>
 						Edit Profile
 					</button>
@@ -81,7 +141,15 @@ const Seller = () => {
 					</div>
 				</div>
 				<hr className={styles.divider} />
-				<h2>Products</h2>
+				<div className={styles.productsSection}>
+					<h2>Products</h2>
+					<button
+						className={styles.addProductButton}
+						onClick={() => setAddProductModal(true)}
+					>
+						Add product
+					</button>
+				</div>
 				<ul className={styles.productGrid}>
 					{seller?.products?.map((product) => (
 						<ProductCard key={product._id} product={product} />
@@ -92,6 +160,19 @@ const Seller = () => {
 				</ul>
 			</main>
 			<Footer />
+
+			<EditProfileModal
+				isOpen={editModal}
+				initialData={seller}
+				onClose={() => setEditModal(false)}
+				onSave={handleSaveProfile}
+			/>
+
+			<AddProductModal
+				isOpen={addProductModal}
+				onClose={() => setAddProductModal(false)}
+				onSave={handleSaveProduct}
+			/>
 		</>
 	);
 };

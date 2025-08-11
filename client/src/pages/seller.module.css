@@ -11,7 +11,8 @@
 	height: 140px;
 }
 
-.profile {
+.profile,
+.productsSection {
 	display: flex;
 	justify-content: space-between;
 	gap: 20px;
@@ -20,7 +21,8 @@
 	margin-bottom: 2rem;
 }
 
-.editButton {
+.editButton,
+.addProductButton {
 	background-color: var(--burntGold);
 	color: black;
 	border: none;

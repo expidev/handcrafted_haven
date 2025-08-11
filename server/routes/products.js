@@ -1,6 +1,10 @@
 const express = require("express");
 const Product = require("../models/Product");
 const verifyToken = require("../middleware/verifyToken");
+const User = require("../models/User");
+const validateReq = require("../middleware/validateReq");
+const { addProductValidation } = require("../validation/products");
+const uploadProduct = require("../middleware/productStorage");
 
 const router = express.Router();
 
@@ -48,22 +52,30 @@ router.get("/:id", async (req, res) => {
 });
 
 // POST new product
-router.post("/", verifyToken, async (req, res) => {
-  try {
-    const { title, description, price, image, category } = req.body;
-    const product = await Product.create({
-      title,
-      description,
-      price,
-      image,
-      category,
-      artisanId: req.user.id,
-    });
-    res.status(201).json(product);
-  } catch (err) {
-    res.status(500).json({ error: "Server error" });
-  }
-});
+router.post("/", verifyToken, uploadProduct.single("image"),
+  addProductValidation, validateReq, async (req, res) => {
+    try {
+      const { title, description, price, category } = req.body;
+      const productImage = req.file ? process.env.BASE_URL + '/' + req.file.path : null;
+      const product = await Product.create({
+        title,
+        description,
+        price,
+        image: productImage,
+        category,
+        artisanId: req.user.id,
+      });
+
+      const user = await User.findById(req.user.id);
+      if (!user || !user.isSeller) {
+        return res.status(403).json({ error: "Unauthorized" });
+      }
+      res.status(201).json(product);
+    } catch (err) {
+      console.error("Error creating product:", err);
+      res.status(500).json({ error: "Server error" });
+    }
+  });
 
 // PUT (update) product
 router.put("/:id", verifyToken, async (req, res) => {

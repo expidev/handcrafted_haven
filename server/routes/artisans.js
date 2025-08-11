@@ -3,6 +3,10 @@ const router = express.Router();
 const Artisan = require("../models/Artisan");
 const User = require("../models/User");
 const Product = require("../models/Product");
+const verifyToken = require("../middleware/verifyToken");
+const upload = require("../middleware/upload");
+const validateReq = require("../middleware/validateReq");
+const { updateArtisanValidation } = require("../validation/artisans");
 
 router.get("/", async (req, res) => {
   const filter = {
@@ -36,6 +40,41 @@ router.post("/", async (req, res) => {
     await newArtisan.save();
     res.status(201).json(newArtisan);
   } catch (err) {
+    res.status(400).json({ error: "Invalid data" });
+  }
+});
+
+// Update artisan details
+router.put("/:id", verifyToken, upload.single("profile"), updateArtisanValidation, validateReq, async (req, res) => {
+  try {
+    const { name, bio, speciality } = req.body;
+    const profileImage = req.file ? req.file.path : null;
+
+    const updateData = {
+      name,
+      "artisanDetails.bio": bio,
+      "artisanDetails.speciality": speciality,
+      "artisanDetails.category": "",
+      "artisanDetails.region": "",
+    };
+
+    if (profileImage) {
+      updateData["artisanDetails.image"] = process.env.BASE_URL + '/' + profileImage;
+    }
+
+    const user = await User.findByIdAndUpdate(
+      req.params.id,
+      { $set: updateData },
+      { new: true }
+    );
+
+    if (!user || !user.isSeller) {
+      return res.status(404).json({ error: "Artisan not found" });
+    }
+
+    res.json(user);
+  } catch (err) {
+    console.error("Error updating artisan:", err);
     res.status(400).json({ error: "Invalid data" });
   }
 });
