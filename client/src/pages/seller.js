@@ -120,13 +120,12 @@ const Seller = () => {
 			<main className={styles.container}>
 				<div className={styles.profile}>
 					<h2>Seller Management</h2>
-					<Link
-						href={"/seller/edit"}
+					<button
 						className={styles.editButton}
 						onClick={() => setEditModal(true)}
 					>
 						Edit Profile
-					</Link>
+					</button>
 				</div>
 				<div className={styles.flexRow}>
 					<Image
