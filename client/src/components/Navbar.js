@@ -99,10 +99,6 @@ const Navbar = () => {
         <Link href="/cart" style={{ ...navItemStyle, ...(router.pathname === "/cart" ? activeStyle : {}) }}>
           <MdShoppingCartCheckout /> Cart
         </Link>
-        <Link href="/about" style={{ ...navItemStyle, ...(router.pathname === "/about" ? activeStyle : {}) }}>
-          <FaInfoCircle /> About
-        </Link>
-
         {isAuthenticated ? (
           <div
             onClick={handleLogout}
