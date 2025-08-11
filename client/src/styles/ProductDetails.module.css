@@ -12,6 +12,13 @@
   flex: 1;
 }
 
+.nothing {
+  text-align: center;
+  color: var(--mediumGray);
+  font-size: 18px;
+  margin-top: 2rem;
+}
+
 .image {
   display: block;
   width: 100%;

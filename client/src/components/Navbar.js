@@ -33,9 +33,22 @@ const activeStyle = {
 const Navbar = () => {
   const router = useRouter();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isSeller, setIsSeller] = useState(false);
 
   useEffect(() => {
     const token = localStorage.getItem("token");
+    if (token) {
+      try {
+        const decodedToken = JSON.parse(atob(token.split('.')[1]));
+        setIsAuthenticated(true);
+        if (decodedToken.isSeller) {
+          setIsSeller(true);
+        }
+      } catch (error) {
+        console.error("Invalid token:", error);
+        setIsAuthenticated(false);
+      }
+    }
     setIsAuthenticated(!!token);
   }, []);
 
@@ -99,6 +112,14 @@ const Navbar = () => {
         <Link href="/cart" style={{ ...navItemStyle, ...(router.pathname === "/cart" ? activeStyle : {}) }}>
           <MdShoppingCartCheckout /> Cart
         </Link>
+        {isSeller && (
+          <Link
+            href="/seller"
+            style={{ ...navItemStyle, ...(router.pathname === "/seller" ? activeStyle : {}) }}
+          >
+            <FaBoxOpen /> Seller
+          </Link>
+        )}
         {isAuthenticated ? (
           <div
             onClick={handleLogout}

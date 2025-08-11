@@ -29,7 +29,7 @@ export default function Orders() {
 				<title>Order History - Handcrafted Haven</title>
 				<meta name="description" content="View your past orders and their details." />
 			</Head>
-			<main style={{ padding: "2rem", minHeight: "80vh", maxWidth: "800px", margin: "0 auto" }}>
+			<main style={{ padding: "2rem", minHeight: "80vh", maxWidth: "1200px", margin: "0 auto" }}>
 				<h1>Order History</h1>
 				{orders.map((order) => (
 					<div

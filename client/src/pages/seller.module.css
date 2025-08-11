@@ -11,6 +11,26 @@
 	height: 140px;
 }
 
+.profile {
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+	width: 100%;
+	align-items: center;
+	margin-bottom: 2rem;
+}
+
+.editButton {
+	background-color: var(--burntGold);
+	color: black;
+	border: none;
+	padding: 5px 15px;
+	border-radius: 6px;
+	cursor: pointer;
+	font-size: 16px;
+	margin-bottom: 1rem;
+}
+
 .nothing {
 	text-align: center;
 	color: var(--mediumGray);

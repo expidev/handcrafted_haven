@@ -69,6 +69,9 @@ const ArtisanDetails = () => {
 					{artisan?.products?.map((product) => (
 						<ProductCard key={product._id} product={product} />
 					))}
+					{!artisan?.products?.length && (
+						<p className={styles.nothing}>No products found for this artisan.</p>
+					)}
 				</ul>
 			</main>
 			<Footer />
