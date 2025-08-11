@@ -1,0 +1,53 @@
+.main {
+	padding: 2rem;
+	background-color: var(--softSand);
+	transition: opacity 1s ease-in-out;
+}
+
+.fadeIn {
+	opacity: 1;
+}
+
+.footer {
+	background-color: var(--charcoalGray);
+	color: var(--softSand);
+	padding: 2rem;
+}
+
+
+.footerHeading {
+	padding: 0.5rem 0;
+	display: block;
+	font-weight: bold;
+	font-size: 20px;
+	margin-bottom: 1.5rem;
+}
+
+.footerTop {
+	display: flex;
+	justify-content: center;
+	gap: 6rem;
+	margin-bottom: 12rem;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+	.footerTop {
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+}
+
+.footerTop div {
+	padding-left: 10px;
+	min-width: 200px;
+}
+
+
+.footerBottom {
+	text-align: center;
+	font-size: 0.85rem;
+	margin-top: 4rem;
+}

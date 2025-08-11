@@ -23,6 +23,17 @@ router.get("/", async (req, res) => {
   }
 });
 
+// Get featured products with a harcoded limit of +6
+router.get("/featured", async (req, res) => {
+  try {
+    const products = await Product.find().limit(6).sort({ createdAt: -1 });
+    res.json(products);
+  } catch (err) {
+    console.error("Error fetching featured products:", err);
+    res.status(500).json({ message: "Server error" });
+  }
+});
+
 // GET one product by ID
 router.get("/:id", async (req, res) => {
   try {

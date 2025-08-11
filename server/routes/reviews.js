@@ -2,19 +2,20 @@ const express = require("express");
 const Review = require("../models/Review");
 const Product = require("../models/Product");
 const verifyToken = require("../middleware/verifyToken");
+const { reviewValidation } = require("../validation/review");
+const validateReq = require("../middleware/validateReq");
 
 const router = express.Router();
+
 router.get("/latest", async (req, res) => {
   try {
-    // console.log("entered");
     const latestReviews = await Review.find().sort({ createdAt: -1 }).limit(5);
-    // console.log(latestReviews);
     res.json(latestReviews);
   } catch (err) {
     res.status(500).json({ error: "Failed to fetch latest reviews" });
   }
 });
-router.post("/:productId", verifyToken, async (req, res) =>
+router.post("/:productId", reviewValidation, validateReq, async (req, res) =>
 {
   try
   {

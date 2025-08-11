@@ -1,0 +1,73 @@
+/* Styles for the Register page */
+
+.container {
+	max-width: 400px;
+	margin: 4rem auto;
+	background-color: white;
+	padding: 2rem;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+}
+
+.title {
+	font-size: 24px;
+	margin-bottom: 1.5rem;
+	color: var(--charcoalGray);
+}
+
+.heading {
+	margin-bottom: 1.5rem;
+}
+
+.error {
+	color: red;
+}
+
+.success {
+	color: green;
+}
+
+.formLabel {
+	display: block;
+	margin-bottom: 0.5rem;
+}
+
+.input,
+.select {
+	width: 100%;
+	padding: 8px;
+	margin-bottom: 1rem;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+.input:focus,
+.select:focus {
+	outline: none;
+}
+
+.select {
+	margin-bottom: 1.5rem;
+}
+
+.button {
+	width: 100%;
+	padding: 10px;
+	background-color: var(--burntGold);
+	color: black;
+	border: none;
+	border-radius: 5px;
+	font-weight: normal;
+	cursor: pointer;
+}
+
+.link {
+	margin-top: 1rem;
+	font-size: 0.9rem;
+	color: var(--firebrickRed);
+	text-decoration: none;
+}
+
+.link:hover {
+	text-decoration: underline;
+}

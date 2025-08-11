@@ -3,16 +3,18 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const User = require("../models/User");
 const authMiddleware = require("../middleware/auth");
+const { registerValidation, loginValidation } = require("../validation/auth");
+const validateReq = require("../middleware/validateReq");
 
 const router = express.Router();
 
 // Register
-router.post("/register", async (req, res) => {
+router.post("/register", registerValidation, validateReq, async (req, res) => {
   try {
     const { name, email, password, isSeller } = req.body;
     const existingUser = await User.findOne({ email });
     if (existingUser) {
-      return res.status(409).json({ error: "User already exists" });
+      return res.status(409).json({ message: "Email already exists with an existing account." });
     }
 
     const hashedPassword = await bcrypt.hash(password, 10);
@@ -25,7 +27,7 @@ router.post("/register", async (req, res) => {
 });
 
 // Login
-router.post("/login", async (req, res) => {
+router.post("/login", loginValidation, validateReq, async (req, res) => {
   try {
     const { email, password } = req.body;
 

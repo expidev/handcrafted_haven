@@ -18,6 +18,7 @@ const userSchema = new mongoose.Schema(
     isSeller: {
       type: Boolean,
       default: false,
+      required: true,
     },
     products: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Product',  }],
     artisanDetails: {
