@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Head from 'next/head';
+import Link from 'next/link';
 
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
@@ -16,7 +17,6 @@ const Seller = () => {
 	const fetchSeller = async (id) => {
 		try {
 			const res = await fetch(`${config.API_URL}/api/artisans/${id}`);
-			console.log("Fetching seller with ID:", id);
 
 			if (res.status === 404) {
 				router.push('/404');
@@ -24,7 +24,6 @@ const Seller = () => {
 			}
 
 			const data = await res.json();
-			console.log("Seller data fetched:", data);
 			setSeller(data);
 		} catch (error) {
 			console.error('Error fetching seller details:', error);
@@ -60,11 +59,12 @@ const Seller = () => {
 			<main className={styles.container}>
 				<div className={styles.profile}>
 					<h2>Seller Management</h2>
-					<button
+					<Link
+						href={"/seller/edit"}
 						className={styles.editButton}
 					>
 						Edit Profile
-					</button>
+					</Link>
 				</div>
 				<div className={styles.flexRow}>
 					<Image
@@ -81,7 +81,15 @@ const Seller = () => {
 					</div>
 				</div>
 				<hr className={styles.divider} />
-				<h2>Products</h2>
+				<div className={styles.productsHeader}>
+					<h2>Products</h2>
+					<Link
+						href={"/products/new"}
+						className={styles.editButton}
+					>
+						+ Add Product
+					</Link>
+				</div>
 				<ul className={styles.productGrid}>
 					{seller?.products?.map((product) => (
 						<ProductCard key={product._id} product={product} />
