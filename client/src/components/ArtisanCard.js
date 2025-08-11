@@ -24,8 +24,7 @@ export default function ArtisanCard({ artisan }) {
 					</Link>
 					<div className={styles.metadata}>
 						<p className={styles.speciality}>Speciality: {artisan.speciality ? artisan.speciality : "N/A"}</p>
-						<p className={styles.category}>Category: {artisan.category ? artisan.category : "N/A"}</p>
-						<p className={styles.region}>Region: {artisan.region ? artisan.region : "N/A"}</p>
+						<p className={styles.category}>{artisan.bio ? artisan.bio : "N/A"}</p>
 					</div>
 				</div>
 			</div >
