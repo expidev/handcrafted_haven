@@ -1,5 +1,8 @@
 .container {
   padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  min-height: 80vh;
 }
 
 .item {
@@ -14,6 +17,7 @@
 .image {
   width: 100px;
   height: 100px;
+  background-color: #f5f5f5;
   object-fit: cover;
   border-radius: 6px;
 }
@@ -39,8 +43,8 @@
 .checkout {
   margin-top: 2rem;
   padding: 12px 20px;
-  background-color: var(--mossGreen);
-  color: white;
+  background-color: var(--burntGold);
+  color: black;
   border: none;
   border-radius: 6px;
   cursor: pointer;

@@ -13,6 +13,7 @@
 }
 
 .image {
+  display: block;
   width: 100%;
   max-width: 400px;
   height: 400px;
@@ -125,7 +126,7 @@
 
   .image {
     max-width: 100%;
-    height: auto;
+    height: 300px;
   }
 
 }

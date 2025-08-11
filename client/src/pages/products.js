@@ -70,7 +70,7 @@ export default function Products() {
         <title>Products - Handcrafted Haven</title>
         <meta name="description" content="Browse our collection of unique handmade products." />
       </Head>
-      <main style={{ padding: "2rem" }}>
+      <main style={{ padding: "2rem", minHeight: "100vh", maxWidth: "1200px", margin: "0 auto" }}>
         <h1 style={{ marginBottom: "2rem" }}>Browse Handcrafted Products</h1>
 
         <div className={styles.filterContainer}>
@@ -121,7 +121,6 @@ export default function Products() {
             gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
             gap: "3rem",
             rowGap: "4rem",
-            padding: "2rem",
           }}
         >
           {filteredProducts && filteredProducts.length === 0 && (

@@ -5,24 +5,30 @@ import Image from "next/image";
 
 export default function ArtisanCard({ artisan }) {
 	return (
-		<Link href={`/artisans/${artisan._id}`} className={styles.link}>
+		<>
 			<div className={styles.card}>
-				<div>
-					<Image
-						src={artisan.image || "https://via.placeholder.com/150"}
-						alt={artisan.name}
-						width={300}
-						height={300}
-						className={styles.image}
-					/>
-				</div>
+				<Link href={`/artisans/${artisan._id}`}>
+					<div>
+						<Image
+							src={artisan.image || "https://via.placeholder.com/150"}
+							alt={artisan.name}
+							width={300}
+							height={250}
+							className={styles.image}
+						/>
+					</div>
+				</Link>
 				<div className={styles.details}>
-					<h3 className={styles.name}>{artisan.name}</h3>
-					<p className={styles.specialty}>Speciality: {artisan.specialty}</p>
-					<p className={styles.category}>Category: {artisan.category}</p>
-					<p className={styles.region}>Region: {artisan.region}</p>
+					<Link href={`/artisans/${artisan._id}`}>
+						<h2 className={styles.name}>{artisan.name}</h2>
+					</Link>
+					<div className={styles.metadata}>
+						<p className={styles.speciality}>Speciality: {artisan.speciality ? artisan.speciality : "N/A"}</p>
+						<p className={styles.category}>Category: {artisan.category ? artisan.category : "N/A"}</p>
+						<p className={styles.region}>Region: {artisan.region ? artisan.region : "N/A"}</p>
+					</div>
 				</div>
-			</div>
-		</Link>
+			</div >
+		</>
 	);
 }

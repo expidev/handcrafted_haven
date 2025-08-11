@@ -3,6 +3,9 @@ import Navbar from "../components/Navbar";
 import styles from "../styles/Cart.module.css";
 import Footer from "../components/Footer";
 import { useRouter } from "next/router";
+import { config } from "../../config/config";
+import Image from "next/image";
+import Head from "next/head";
 
 export default function CartPage() {
   const [cart, setCart] = useState(null);
@@ -21,7 +24,7 @@ export default function CartPage() {
       }
 
       try {
-        const res = await fetch("http://localhost:5500/api/auth/me", {
+        const res = await fetch(`${config.API_URL}/api/auth/me`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -48,7 +51,7 @@ export default function CartPage() {
 
   const fetchCart = async (token) => {
     try {
-      const res = await fetch("http://localhost:5500/api/cart", {
+      const res = await fetch(`${config.API_URL}/api/cart`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -69,7 +72,7 @@ export default function CartPage() {
     if (!token) return;
 
     try {
-      await fetch("http://localhost:5500/api/cart/update", {
+      await fetch(`${config.API_URL}/api/cart/update`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -97,7 +100,7 @@ export default function CartPage() {
     if (!token) return;
 
     try {
-      await fetch("http://localhost:5500/api/cart/remove", {
+      await fetch(`${config.API_URL}/api/cart/remove`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -159,6 +162,10 @@ export default function CartPage() {
   return (
     <>
       <Navbar />
+      <Head>
+        <title>Cart - Handcrafted Haven</title>
+        <meta name="description" content="View and manage your cart items." />
+      </Head>
       <main className={styles.container}>
         <h1>Your Cart</h1>
 
@@ -172,19 +179,22 @@ export default function CartPage() {
 
               return (
                 <div key={item._id} className={styles.item}>
-                  <img
+                  <Image
                     src={product.image || "/placeholder.png"}
                     alt={product.title}
                     className={styles.image}
                     style={{ objectFit: "cover", maxHeight: "180px" }}
+                    width={100}
+                    height={100}
                   />
                   <div className={styles.details}>
-                    <h3>{product.title}</h3>
+                    <h2 style={{ fontSize: "1.2rem", fontWeight: "bold" }}>{product.title}</h2>
                     <p>${product.price} each</p>
                     <input
                       type="number"
                       min="1"
                       value={item.quantity}
+                      aria-label="Quantity"
                       onChange={(e) =>
                         updateQuantity(product._id, parseInt(e.target.value))
                       }

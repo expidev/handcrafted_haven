@@ -58,15 +58,18 @@ const Navbar = () => {
         position: "sticky",
         top: 0,
         zIndex: 1000,
+        rowGap: "1rem",
       }}
     >
       <div>
         <Link
           href="/"
           style={{
+            display: "flex",
             fontSize: "22px",
             color: "white",
             fontWeight: "bold",
+            marginRight: "2rem",
             textDecoration: "none",
           }}
         >

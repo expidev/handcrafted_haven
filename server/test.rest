@@ -1,0 +1,2 @@
+## get the artisans
+http://localhost:5500/api/artisans/

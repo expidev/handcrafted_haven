@@ -1,8 +1,16 @@
 .container {
   padding: 4rem;
+  padding-top: 0;
   display: flex;
   gap: 3rem;
   flex-wrap: wrap;
+}
+
+.title {
+  font-size: 2rem;
+  margin: 4rem;
+  margin-bottom: 2rem;
+  color: var(--charcoalGray);
 }
 
 .summary {
@@ -34,10 +42,18 @@
   border-radius: 6px;
 }
 
+.input:focus {
+  outline: none;
+}
+
+.page {
+  margin-bottom: 10rem;
+}
+
 .button {
   padding: 12px;
-  background-color: var(--charcoalGray);
-  color: var(--softSand);
+  background-color: var(--burntGold);
+  color: black;
   font-size: 16px;
   border: none;
   border-radius: 6px;
