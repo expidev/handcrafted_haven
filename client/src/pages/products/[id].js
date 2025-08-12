@@ -19,7 +19,6 @@ export default function ProductDetails() {
 
   useEffect(() => {
     if (id) {
-      console.log(id);
       fetch(`${config.API_URL}/api/products/${id}`)
         .then((res) => res.json())
         .then((data) => setProduct(data))

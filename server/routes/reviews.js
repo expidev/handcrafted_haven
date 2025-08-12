@@ -4,6 +4,7 @@ const Product = require("../models/Product");
 const verifyToken = require("../middleware/verifyToken");
 const { reviewValidation } = require("../validation/review");
 const validateReq = require("../middleware/validateReq");
+const authMiddleware = require("../middleware/auth");
 
 const router = express.Router();
 
@@ -15,7 +16,7 @@ router.get("/latest", async (req, res) => {
     res.status(500).json({ error: "Failed to fetch latest reviews" });
   }
 });
-router.post("/:productId", reviewValidation, validateReq, async (req, res) =>
+router.post("/:productId", reviewValidation, validateReq, authMiddleware, async (req, res) =>
 {
   try
   {
@@ -50,6 +51,7 @@ router.post("/:productId", reviewValidation, validateReq, async (req, res) =>
     res.status(500).json({ error: "Server error" });
   }
 });
+
 router.get("/:productId", async (req, res) =>
 {
   try

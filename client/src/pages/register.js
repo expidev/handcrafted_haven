@@ -34,7 +34,7 @@ export default function Register() {
 				name: form.name,
 				email: form.email,
 				password: form.password,
-				isSeller: form.isSeller != "seller" ? false : true,
+				isSeller: form.role != "seller" ? false : true,
 			};
 			const res = await fetch(`${config.API_URL}/api/auth/register`, {
 				method: "POST",

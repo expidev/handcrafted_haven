@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Head from 'next/head';
+import Link from 'next/link';
 
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
