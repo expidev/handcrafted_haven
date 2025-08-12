@@ -54,7 +54,7 @@ const Seller = () => {
 		} catch (error) {
 			console.error('Error in useEffect:', error);
 		}
-	}, [id, !isUpdated]);
+	}, [id, isUpdated]);
 
 	const handleSaveProfile = async (formData) => {
 		try {

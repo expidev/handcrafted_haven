@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useEffect, useState } from "react";
@@ -46,9 +48,9 @@ export default function NotFound() {
 						color: colors.charcoalGray,
 					}}
 				>
-					The page you are looking for doesn't exist.
+					The page you are looking for doesn&apos;t exist.
 				</p>
-				<a
+				<Link
 					href="/"
 					style={{
 						display: "inline-block",
@@ -69,7 +71,7 @@ export default function NotFound() {
 					}
 				>
 					Go Back Home
-				</a>
+				</Link>
 			</main>
 			<Footer />
 		</>

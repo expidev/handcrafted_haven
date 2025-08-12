@@ -43,7 +43,7 @@ export default function Checkout() {
     if (parsedProducts.length > 0) {
       fetchProductDetails();
     }
-  }, [products]);
+  }, [products, parsedProducts]);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });

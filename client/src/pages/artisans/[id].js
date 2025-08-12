@@ -15,28 +15,28 @@ const ArtisanDetails = () => {
 	const { id } = router.query;
 	const [artisan, setArtisan] = useState(null);
 
-	const fetchArtisan = async (id) => {
-		try {
-			const res = await fetch(
-				`${config.API_URL}/api/artisans/${id}`,
-			);
-
-			if (res.status === 404) {
-				router.push("/404");
-				return;
-			}
-
-			const data = await res.json();
-
-			setArtisan(data);
-		} catch (error) {
-			console.error("Error fetching artisan details:", error);
-		}
-	};
-
 	useEffect(() => {
+		const fetchArtisan = async (id) => {
+			try {
+				const res = await fetch(
+					`${config.API_URL}/api/artisans/${id}`,
+				);
+
+				if (res.status === 404) {
+					router.push("/404");
+					return;
+				}
+
+				const data = await res.json();
+
+				setArtisan(data);
+			} catch (error) {
+				console.error("Error fetching artisan details:", error);
+			}
+		};
+
 		if (id) fetchArtisan(id);
-	}, [id]);
+	}, [id, router]);
 
 	return (
 		<>

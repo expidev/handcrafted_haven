@@ -3,7 +3,7 @@ const fs = require("fs");
 const csv = require("csv-parser");
 const User = require("./models/User")
 
-mongoose.connect("mongodb://localhost:27017/handcrafted", {
+mongoose.connect("mongodb+srv://cluster0:5TbbfwpfpYO6qqi5@cluster0.slsse8s.mongodb.net/handcrafted?retryWrites=true&w=majority&appName=Cluster0", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });

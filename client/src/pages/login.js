@@ -85,7 +85,7 @@ export default function Login() {
 				</form>
 
 				<p>
-					Don't have an account?{" "}
+					Don&apos;t have an account?{" "}
 					<Link href="/register" aria-label="Register" className={styles.link} >
 						Register here
 					</Link>
